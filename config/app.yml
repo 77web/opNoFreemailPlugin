@@ -1,0 +1,8 @@
+all:
+  freemail:
+    domain_list:
+      - yahoo.co.jp
+      - yahoo.com
+      - hotmail.com
+      - hotmail.co.jp
+      - mail.goo.ne.jp

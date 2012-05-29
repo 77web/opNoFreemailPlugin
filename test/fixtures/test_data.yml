@@ -1,0 +1,5 @@
+SnsConfig:
+  enable_register:
+    id: ~
+    name: op_auth_MailAddress_plugin_invite_mode
+    value: 2
