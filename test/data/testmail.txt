@@ -1,7 +1,0 @@
-From: %s
-To: get@example.com
-Date: Mon, 31 May 2012 00:00:00 +0900
-Message-ID: <test@example.com>
-Subject: title
-
-body
