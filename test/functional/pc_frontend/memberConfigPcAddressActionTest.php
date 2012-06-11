@@ -21,6 +21,7 @@ $browser
       ->checkElement('#pcAddressForm')
     ->end()
     ->setField('member_config[pc_address]', 'user@yahoo.co.jp')
+    ->setField('member_config[pc_address_confirm]', 'user@yahoo.co.jp')
     ->click('Send')
     
     ->with('request')->begin()
@@ -32,4 +33,19 @@ $browser
       ->isStatusCode(200)
       ->checkElement('.error_list li:contains("Free mail is not allowed.")')
     ->end()
+;
+
+sfConfig::set('op_is_use_captcha', false);
+$browser
+  ->get('/member/config/category/pcAddress')
+    ->setField('member_config[pc_address]', 'sns2@example.com')
+    ->setField('member_config[pc_address_confirm]', 'sns2@example.com')
+    ->click('Send')
+    
+    ->with('response')->begin()
+      ->isStatusCode(302)
+    ->end()
+    ->followRedirect()
+    
+    ->isForwardedTo('member', 'config')
 ;
