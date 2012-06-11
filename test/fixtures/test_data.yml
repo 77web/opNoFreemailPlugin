@@ -3,3 +3,19 @@ SnsConfig:
     id: ~
     name: op_auth_MailAddress_plugin_invite_mode
     value: 2
+
+Member:
+  member_1:
+    id: ~
+    name: "OpenPNE君"
+    is_active: true
+
+MemberConfig:
+  member_1_pc_address:
+    Member: member_1
+    name: "pc_address"
+    value: "sns@example.com"
+  member_1_password:
+    Member: member_1
+    name: "password"
+    value: "<?php echo md5('password'); ?>"
