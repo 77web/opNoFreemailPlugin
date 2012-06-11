@@ -21,8 +21,6 @@ $browser
     ->checkElement('.error_list li:contains("Free mail is not allowed.")')
   ->end();
 
-var_dump(sfContext::getInstance()->getResponse()->getContent());
-
 $browser
   ->info('using non-freemail address is still allowed.')
   ->get('/opAuthMailAddress/requestRegisterURL')
